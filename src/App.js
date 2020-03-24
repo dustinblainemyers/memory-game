@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './App.css';
+import MemoryCard from "./components/memorycard.jsx"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <h2>Match Cards To Win</h2>
         
       </header>
+      <MemoryCard/>
     </div>
   );
 }
