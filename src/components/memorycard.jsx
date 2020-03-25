@@ -4,7 +4,7 @@ import './MemoryCard.css';
 class MemoryCard extends Component {
     render() {
       return (
-        <div className="MemoryCard">
+        <div className="MemoryCard" onClick={this.clickHandler}>
                 <div className="MemoryCardInner">
                     <div className="MemoryCardFront">
                         ∆
