@@ -8,9 +8,14 @@ class MemoryCard extends Component {
 
     }
     render() {
+        let memoryCardInnerClass = "MemoryCardInner";
+
+        if(this.state.isFlipped) {
+            memoryCardInnerClass = memoryCardInnerClass + "flipped";
+        }
       return (
         <div className="MemoryCard" onClick={this.clickHandler}>
-                <div className="MemoryCardInner">
+                <div className={memoryCardInnerClass}>
                     <div className="MemoryCardFront">
                         ∆
                     </div>
