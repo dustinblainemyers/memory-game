@@ -18,6 +18,11 @@ class MemoryCard extends Component {
       )
 
     }
+
+    clickHandler() {
+
+        alert("card clicked")
+    }
 }
 
 export default MemoryCard;
