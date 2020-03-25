@@ -12,11 +12,32 @@ function App() {
 
         
       </header>
-      <div className="card-container">
-      <MemoryCard/>
-      <MemoryCard/>
-      <MemoryCard/>
-      <MemoryCard/>
+      <div className="grid-container">
+        <div className="grid-row">
+          <MemoryCard/>
+          <MemoryCard/>
+          <MemoryCard/>
+          <MemoryCard/>
+        </div>
+        <div className="grid-row">
+          <MemoryCard/>
+          <MemoryCard/>
+          <MemoryCard/>
+          <MemoryCard/>
+        </div>
+        <div className="grid-row">
+          <MemoryCard/>
+          <MemoryCard/>
+          <MemoryCard/>
+          <MemoryCard/>
+        </div>
+        <div className="grid-row">
+          <MemoryCard/>
+          <MemoryCard/>
+          <MemoryCard/>
+          <MemoryCard/>
+        </div>
+      
       
       </div>
       
