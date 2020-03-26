@@ -37,6 +37,15 @@ class App extends Component {
       pickedCards: []
     };
   }
+
+  pickCard(cardIndex) {
+    if (this.state.deck[cardIndex].isFlipped === true  ) {
+      return 
+    }
+    const cardToFlip = {...this.state.deck[cardIndex]}
+    cardToFlip.isFlipped = true;
+
+  }
   render() {
 
     const cardsJSX = this.state.deck.map( (card,index) => {
