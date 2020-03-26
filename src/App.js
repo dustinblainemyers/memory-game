@@ -44,7 +44,15 @@ class App extends Component {
     }
     const cardToFlip = {...this.state.deck[cardIndex]}
     cardToFlip.isFlipped = true;
+    const newPickedCards = this.state.pickedCards.concat(cardIndex);
+    const newDeck = this.state.deck.map( (card, index) => {
+      if (cardIndex === index) {
+        return cartToFlip;
+      }
+      return card
+    });
 
+    this.setState({deck: newDeck, pickedCards: newPickedCards});
   }
   render() {
 
