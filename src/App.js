@@ -64,6 +64,11 @@ class App extends Component {
     }
     this.setState({deck: newDeck, pickedCards: newPickedCards});
   }
+
+  unflipCards(card1Index, card2Index) {
+    const card1 = {...this.state.deck[card1Index]}
+    const card2 = {...this.state.deck[card2Index]}
+  }
   render() {
 
     const cardsJSX = this.state.deck.map( (card,index) => {
