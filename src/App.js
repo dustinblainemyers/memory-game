@@ -1,4 +1,5 @@
-import React from "react";
+import React, {Component} from "react";
+
 
 import "./App.css";
 import MemoryCard from "./components/memorycard.jsx";
@@ -8,7 +9,7 @@ class App extends Component {
     super();
     this.state = { isFlipped: false };
   }
-  App() {
+  render() {
     return (
       <div className='App'>
         <header className='App-header'>
