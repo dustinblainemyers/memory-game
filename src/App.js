@@ -51,7 +51,16 @@ class App extends Component {
       }
       return card
     });
+    if (newPickedCards.length === 2) {
+      const card1Index = newPickedCards[0];
+      const card2Index = newPickedCards[1];
+      const card1 = newDeck[card1Index];
+      const card2 = newDeck[card2Index];
 
+        if (card1.Symbol === card2.Symbol) {
+          console.log("card flipped")
+        }
+    }
     this.setState({deck: newDeck, pickedCards: newPickedCards});
   }
   render() {
