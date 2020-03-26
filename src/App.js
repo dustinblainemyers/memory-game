@@ -38,6 +38,12 @@ class App extends Component {
     };
   }
   render() {
+
+    const cardsJSX = this.state.deck.map( (card,index) => {
+      return <MemoryCard/>
+    }
+      
+    );
     return (
       <div className='App'>
         <header className='App-header'>
@@ -46,28 +52,16 @@ class App extends Component {
         </header>
         <div className='grid-container'>
           <div className='grid-row'>
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
+            {cardsJSX.slice(0,4)}
           </div>
           <div className='grid-row'>
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
+          {cardsJSX.slice(4,8)}
           </div>
           <div className='grid-row'>
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
+          {cardsJSX.slice(8,12)}
           </div>
           <div className='grid-row'>
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
-            <MemoryCard />
+          {cardsJSX.slice(12,16)}
           </div>
         </div>
       </div>
