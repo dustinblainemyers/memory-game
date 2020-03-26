@@ -47,7 +47,7 @@ class App extends Component {
     const newPickedCards = this.state.pickedCards.concat(cardIndex);
     const newDeck = this.state.deck.map( (card, index) => {
       if (cardIndex === index) {
-        return cartToFlip;
+        return cardToFlip;
       }
       return card
     });
@@ -57,7 +57,7 @@ class App extends Component {
   render() {
 
     const cardsJSX = this.state.deck.map( (card,index) => {
-      return <MemoryCard symbol={card.Symbol} isFlipped={card.isFlipped} key={index}/>
+      return <MemoryCard symbol={card.Symbol} isFlipped={card.isFlipped} key={index} pickCard={this.pickCard.bind(this, index)}/>
     }
       
     );
