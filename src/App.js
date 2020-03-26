@@ -57,8 +57,8 @@ class App extends Component {
       const card1 = newDeck[card1Index];
       const card2 = newDeck[card2Index];
 
-        if (card1.Symbol === card2.Symbol) {
-          console.log("card flipped")
+        if (card1.Symbol !== card2.Symbol) {
+          console.log("unflip cards")
         }
     }
     this.setState({deck: newDeck, pickedCards: newPickedCards});
