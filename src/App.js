@@ -7,7 +7,11 @@ import MemoryCard from "./components/memorycard.jsx";
 class App extends Component {
   constructor() {
     super();
-    this.state = { isFlipped: false };
+    this.state = { 
+      
+      deck: [],
+      pickedCards: []
+    };
   }
   render() {
     return (
