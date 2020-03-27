@@ -58,16 +58,40 @@ class App extends Component {
       const card2 = newDeck[card2Index];
 
         if (card1.Symbol !== card2.Symbol) {
-          console.log("unflip cards")
+          setTimeout(() => {
+            this.unflipCards(card1Index, card2Index)
+          }, 1000)
+
         }
       newPickedCards = [];
     }
     this.setState({deck: newDeck, pickedCards: newPickedCards});
   }
 
-  unflipCards(card1Index, card2Index) {
-    const card1 = {...this.state.deck[card1Index]}
-    const card2 = {...this.state.deck[card2Index]}
+  unFlipCards = (card1Index, card2Index) => {
+    const { deck } = this.state;
+    const card1 = {...deck[card1Index]};
+    const card2 = {...deck[card2Index]}
+    card1.isFlipped = false;
+    card2.isFlipped = false;
+   
+    const newDeck = deck.map((card, index) => {
+      if (card1Index === index) {
+        return card1;
+      }
+      if (card2Index === index) {
+        return card2;
+      }
+      return card;
+    });
+
+    
+
+    this.setState({
+      deck: newDeck
+    });
+
+    
   }
   render() {
 
