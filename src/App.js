@@ -59,7 +59,7 @@ class App extends Component {
 
         if (card1.Symbol !== card2.Symbol) {
           setTimeout(() => {
-            this.unflipCards(card1Index, card2Index)
+            this.unFlipCards(card1Index, card2Index)
           }, 1000)
 
         }
